@@ -23,7 +23,7 @@ Partial Class rpt_reservas
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt_reservas))
         Me.mcHasta = New DevComponents.Editors.DateTimeAdv.MonthCalendarAdv()
         Me.mcDesde = New DevComponents.Editors.DateTimeAdv.MonthCalendarAdv()
@@ -88,7 +88,7 @@ Partial Class rpt_reservas
         Me.mcHasta.FirstDayOfWeek = System.DayOfWeek.Monday
         Me.mcHasta.Location = New System.Drawing.Point(203, 12)
         Me.mcHasta.MarkedDates = New Date(-1) {}
-        Me.mcHasta.MaxDate = New Date(2020, 12, 31, 0, 0, 0, 0)
+        Me.mcHasta.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         Me.mcHasta.MinDate = New Date(2010, 1, 1, 0, 0, 0, 0)
         Me.mcHasta.MonthlyMarkedDates = New Date(-1) {}
         Me.mcHasta.Name = "mcHasta"
@@ -131,7 +131,7 @@ Partial Class rpt_reservas
         Me.mcDesde.FirstDayOfWeek = System.DayOfWeek.Monday
         Me.mcDesde.Location = New System.Drawing.Point(3, 12)
         Me.mcDesde.MarkedDates = New Date(-1) {}
-        Me.mcDesde.MaxDate = New Date(2020, 12, 31, 0, 0, 0, 0)
+        Me.mcDesde.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         Me.mcDesde.MinDate = New Date(2010, 1, 1, 0, 0, 0, 0)
         Me.mcDesde.MonthlyMarkedDates = New Date(-1) {}
         Me.mcDesde.Name = "mcDesde"
@@ -284,14 +284,14 @@ Partial Class rpt_reservas
         'Datadetalle
         '
         Me.Datadetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Datadetalle.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Datadetalle.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Datadetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Datadetalle.EnableHeadersVisualStyles = False
         Me.Datadetalle.Location = New System.Drawing.Point(51, 0)

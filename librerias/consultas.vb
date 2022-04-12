@@ -78,7 +78,7 @@ Module consultas
         Dim ds As New DataSet
         clConex = Conexion.obtenerConexion
         Dim cad1, cad2, cad3, cad As String
-        cad1 = "Select r.operacion,convert(SUBSTRING(cod_reserva,12,2),Integer) As fila,Date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso As ESTADO," _
+        cad1 = "Select r.operacion,SUBSTRING(cod_reserva,12,2) As fila,Date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso As ESTADO," _
              & " nom_evento,r1.dsc_recurso As nom_salon,r2.dsc_recurso As tip_evento,r3.dsc_recurso As vendedor,time(fec_ini) As hor_ini,time(fec_produccion) As hor_prod, " _
              & " c.nom_clie As nom_cliente,cs.dir_sucursal As nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos As num_pax,cant,r4.dsc_recurso,dsc_tabla As dsc_grupo,r.obs As notas,rd.obs As notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio As imp_total" _
@@ -94,7 +94,7 @@ Module consultas
              & " left join cliente_sucursal cs On r.cod_sucursal=cs.cod_sucursal" _
              & " where  r.operacion= " & operacion _
              & IIf(estado, " And r5.n_aux=1 ", "")
-        cad2 = " union Select r.operacion,convert(SUBSTRING(cod_reserva,12,2),Integer) As fila,Date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso As ESTADO," _
+        cad2 = " union Select r.operacion,SUBSTRING(cod_reserva,12,2) As fila,Date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso As ESTADO," _
              & " nom_evento,r1.dsc_recurso As nom_salon,r2.dsc_recurso As tip_evento,r3.dsc_recurso As vendedor,time(fec_ini) As hor_ini,time(fec_produccion) As hor_prod, " _
              & " c.nom_clie As nom_cliente,cs.dir_sucursal As nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos As num_pax,cant,a.nom_Art As dsc_recurso,'ALIMENTOS' as dsc_grupo,r.obs as notas,rd.obs as notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio as imp_total" _
@@ -111,7 +111,7 @@ Module consultas
              & " left join cliente_sucursal cs on r.cod_sucursal=cs.cod_sucursal" _
               & " where rd.n_aux1=0 and r.operacion= " & operacion _
              & IIf(estado, " and r5.n_aux=1 ", "")
-        cad3 = " union select r.operacion,convert(SUBSTRING(cod_reserva,12,2),integer) as fila,date(r.fec_ini) fecha_Atencion,num_contrato,r5.dsc_recurso as ESTADO," _
+        cad3 = " union select r.operacion,SUBSTRING(cod_reserva,12,2) as fila,date(r.fec_ini) fecha_Atencion,num_contrato,r5.dsc_recurso as ESTADO," _
              & " nom_evento,r1.dsc_recurso as nom_salon,r2.dsc_recurso as tip_evento,r3.dsc_recurso as vendedor,time(fec_ini) as hor_ini,time(fec_produccion) as hor_prod, " _
              & " c.nom_clie as nom_cliente,cs.dir_sucursal as nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos as num_pax,cant,a.nom_Art as dsc_recurso,'PAQUETES' as dsc_grupo,r.obs as notas,rd.obs as notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio as imp_total" _
@@ -214,7 +214,7 @@ Module consultas
         Dim cad1, cad2, cad3, cad As String
         Dim mfechaI As String = fechaInicio.ToString("yyyy-MM-dd")
         Dim mfechaF As String = fechaFinal.ToString("yyyy-MM-dd")
-        cad1 = "select r.operacion,ingreso,convert(SUBSTRING(cod_reserva,12,2),integer) as fila,date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
+        cad1 = "select r.operacion,ingreso,SUBSTRING(cod_reserva,12,2) as fila,date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
              & " nom_evento,r1.dsc_recurso As nom_salon,r2.dsc_recurso As tip_evento,r3.dsc_recurso As vendedor,time(fec_ini) as hor_ini,time(fec_produccion) as hor_prod, " _
              & " c.nom_clie As nom_cliente,cs.dir_sucursal as nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos As num_pax,cant,cant_prod,r4.dsc_recurso,dsc_tabla As dsc_grupo,r.obs As notas,rd.obs As notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio as imp_total,t.tip_recurso,num_orden,num_factura" _
@@ -224,15 +224,15 @@ Module consultas
              & " left join tipo_recurso r6 on r.cod_postventa=r6.cod_recurso" _
              & " left join tipo_recurso r3 on r.cod_vend=r3.c_aux" _
              & " left join tipo_recurso r5 on r.cod_estado=r5.cod_recurso" _
-             & " inner join tipo_recurso r4 on rd.cod_recurso=r4.cod_recurso" _
-             & " inner join tipo_tabla t on r4.cod_tabla=t.cod_tabla" _
+             & " left join tipo_recurso r4 on rd.cod_recurso=r4.cod_recurso" _
+             & " left join tipo_tabla t on r4.cod_tabla=t.cod_tabla" _
              & " left join cliente c on r.cod_cliente=c.cod_clie" _
              & " left join cliente_contacto cc on r.cod_contacto=cc.cod_contacto" _
              & " left join cliente_sucursal cs on r.cod_sucursal=cs.cod_sucursal" _
              & " where date(fec_ini)>='" & mfechaI & "'" & " and date(fec_ini)<='" & mfechaF & "'" _
              & IIf(estado, " and r5.n_aux=1 ", "") _
              & IIf(esadicional, " and r.esAdicional=1 ", "")
-        cad2 = " union select r.operacion,ingreso,convert(SUBSTRING(cod_reserva,12,2),integer) as fila,date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
+        cad2 = " union select r.operacion,ingreso,SUBSTRING(cod_reserva,12,2) as fila,date(r.fec_ini) fecha_atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
              & " nom_evento,r1.dsc_recurso as nom_salon,r2.dsc_recurso as tip_evento,r3.dsc_recurso as vendedor,time(fec_ini) as hor_ini,time(fec_produccion) as hor_prod, " _
              & " c.nom_clie as nom_cliente,cs.dir_sucursal as nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos as num_pax,cant,cant_prod,a.nom_Art as dsc_recurso,'ALIMENTOS' as dsc_grupo,r.obs as notas,rd.obs as notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio as imp_total,s.tip_recurso,num_orden,num_factura" _
@@ -244,14 +244,14 @@ Module consultas
              & " left join tipo_recurso r5 on r.cod_estado=r5.cod_recurso" _
              & " inner join articulo a on rd.cod_recurso=a.cod_art" _
              & " inner join subgrupo s on s.cod_sgrupo=a.cod_sgrupo" _
-             & " inner join grupo g on g.cod_grupo=s.cod_grupo" _
+             & " left join grupo g on g.cod_grupo=s.cod_grupo" _
              & " left join cliente c on r.cod_cliente=c.cod_clie left join art_combo ac on ac.cod_art=a.cod_art" _
              & " left join cliente_contacto cc on r.cod_contacto=cc.cod_contacto" _
              & " left join cliente_sucursal cs on r.cod_sucursal=cs.cod_sucursal" _
              & " where rd.n_aux1=0 and date(fec_ini)>='" & mfechaI & "'" & " and date(fec_ini)<='" & mfechaF & "'" _
              & IIf(estado, " and r5.n_aux=1 ", "") _
              & IIf(esadicional, " and r.esAdicional=1 ", "")
-        cad3 = " union select r.operacion,ingreso,convert(SUBSTRING(cod_reserva,12,2),integer) as fila,date(r.fec_ini) fecha_Atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
+        cad3 = " union select r.operacion,ingreso,SUBSTRING(cod_reserva,12,2) as fila,date(r.fec_ini) fecha_Atencion,num_contrato,r5.dsc_recurso as ESTADO,r6.dsc_recurso as POSTVENTA," _
              & " nom_evento,r1.dsc_recurso as nom_salon,r2.dsc_recurso as tip_evento,r3.dsc_recurso as vendedor,time(fec_ini) as hor_ini,time(fec_produccion) as hor_prod, " _
              & " c.nom_clie as nom_cliente,cs.dir_sucursal as nom_unidad,cc.nom_contacto,cc.fono_contacto,cc.email_contacto,r.num_adultos as num_pax,cant,cant_prod,a.nom_Art as dsc_recurso,'PAQUETES' as dsc_grupo,r.obs as notas,rd.obs as notas_det, " _
              & " rd.precio,r.cod_reserva,r.id_factura,cant*precio as imp_total,s.tip_recurso,num_orden,num_factura" _
@@ -263,7 +263,7 @@ Module consultas
              & " left join tipo_recurso r5 on r.cod_estado=r5.cod_recurso" _
              & " inner join articulo a on rd.cod_recurso=a.cod_art" _
              & " inner join subgrupo s on s.cod_sgrupo=a.cod_sgrupo" _
-             & " inner join grupo g on g.cod_grupo=s.cod_grupo" _
+             & " left join grupo g on g.cod_grupo=s.cod_grupo" _
              & " left join cliente c on r.cod_cliente=c.cod_clie left join art_combo ac on ac.cod_art=a.cod_art" _
              & " left join cliente_contacto cc on r.cod_contacto=cc.cod_contacto" _
              & " left join cliente_sucursal cs on r.cod_sucursal=cs.cod_sucursal" _
