@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>SGE_Eventos.My.MyApplication</StartupObject>
     <RootNamespace>SGE_Eventos</RootNamespace>
-    <AssemblyName>Qsalon</AssemblyName>
+    <AssemblyName>Qeventos</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -24,7 +24,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Qsalon.xml</DocumentationFile>
+    <DocumentationFile>Qeventos.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -34,7 +34,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Qsalon.xml</DocumentationFile>
+    <DocumentationFile>Qeventos.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

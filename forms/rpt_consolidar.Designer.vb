@@ -27,6 +27,7 @@ Partial Class rpt_consolidar
         Me.cboCliente = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.opt_reservasfac = New System.Windows.Forms.RadioButton()
         Me.opt_reservasxid = New System.Windows.Forms.RadioButton()
         Me.optReservas = New System.Windows.Forms.RadioButton()
         Me.cmdCerrar = New DevComponents.DotNetBar.ButtonX()
@@ -37,7 +38,6 @@ Partial Class rpt_consolidar
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
         Me.ChkCliente = New System.Windows.Forms.CheckBox()
-        Me.opt_reservasfac = New System.Windows.Forms.RadioButton()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.dtiHasta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,9 +47,10 @@ Partial Class rpt_consolidar
         'ChkContacto
         '
         Me.ChkContacto.AutoSize = True
-        Me.ChkContacto.Location = New System.Drawing.Point(105, 241)
+        Me.ChkContacto.Location = New System.Drawing.Point(140, 297)
+        Me.ChkContacto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ChkContacto.Name = "ChkContacto"
-        Me.ChkContacto.Size = New System.Drawing.Size(15, 14)
+        Me.ChkContacto.Size = New System.Drawing.Size(18, 17)
         Me.ChkContacto.TabIndex = 1053
         Me.ChkContacto.UseVisualStyleBackColor = True
         '
@@ -59,10 +60,11 @@ Partial Class rpt_consolidar
         Me.cboUnidad.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboUnidad.ForeColor = System.Drawing.Color.SteelBlue
         Me.cboUnidad.FormattingEnabled = True
-        Me.cboUnidad.ItemHeight = 16
-        Me.cboUnidad.Location = New System.Drawing.Point(127, 206)
+        Me.cboUnidad.ItemHeight = 19
+        Me.cboUnidad.Location = New System.Drawing.Point(169, 254)
+        Me.cboUnidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboUnidad.Name = "cboUnidad"
-        Me.cboUnidad.Size = New System.Drawing.Size(275, 24)
+        Me.cboUnidad.Size = New System.Drawing.Size(365, 27)
         Me.cboUnidad.TabIndex = 1048
         '
         'cboContacto
@@ -71,19 +73,21 @@ Partial Class rpt_consolidar
         Me.cboContacto.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboContacto.ForeColor = System.Drawing.Color.SteelBlue
         Me.cboContacto.FormattingEnabled = True
-        Me.cboContacto.ItemHeight = 16
-        Me.cboContacto.Location = New System.Drawing.Point(127, 233)
+        Me.cboContacto.ItemHeight = 19
+        Me.cboContacto.Location = New System.Drawing.Point(169, 287)
+        Me.cboContacto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboContacto.Name = "cboContacto"
-        Me.cboContacto.Size = New System.Drawing.Size(275, 24)
+        Me.cboContacto.Size = New System.Drawing.Size(365, 27)
         Me.cboContacto.TabIndex = 1049
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(26, 239)
+        Me.Label11.Location = New System.Drawing.Point(35, 294)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 18)
+        Me.Label11.Size = New System.Drawing.Size(94, 22)
         Me.Label11.TabIndex = 1052
         Me.Label11.Text = "Contacto"
         '
@@ -91,9 +95,10 @@ Partial Class rpt_consolidar
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(26, 210)
+        Me.Label12.Location = New System.Drawing.Point(35, 258)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(58, 18)
+        Me.Label12.Size = New System.Drawing.Size(75, 22)
         Me.Label12.TabIndex = 1051
         Me.Label12.Text = "Unidad"
         '
@@ -103,19 +108,21 @@ Partial Class rpt_consolidar
         Me.cboCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCliente.ForeColor = System.Drawing.Color.SteelBlue
         Me.cboCliente.FormattingEnabled = True
-        Me.cboCliente.ItemHeight = 16
-        Me.cboCliente.Location = New System.Drawing.Point(127, 180)
+        Me.cboCliente.ItemHeight = 19
+        Me.cboCliente.Location = New System.Drawing.Point(169, 222)
+        Me.cboCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCliente.Name = "cboCliente"
-        Me.cboCliente.Size = New System.Drawing.Size(275, 24)
+        Me.cboCliente.Size = New System.Drawing.Size(365, 27)
         Me.cboCliente.TabIndex = 1047
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(26, 182)
+        Me.Label18.Location = New System.Drawing.Point(35, 224)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(59, 18)
+        Me.Label18.Size = New System.Drawing.Size(74, 22)
         Me.Label18.TabIndex = 1050
         Me.Label18.Text = "Cliente"
         '
@@ -126,21 +133,37 @@ Partial Class rpt_consolidar
         Me.GroupBox2.Controls.Add(Me.optReservas)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.GroupBox2.Location = New System.Drawing.Point(33, 69)
+        Me.GroupBox2.Location = New System.Drawing.Point(44, 85)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(369, 105)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(492, 129)
         Me.GroupBox2.TabIndex = 182
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tipo de Reporte"
+        '
+        'opt_reservasfac
+        '
+        Me.opt_reservasfac.AutoSize = True
+        Me.opt_reservasfac.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.opt_reservasfac.ForeColor = System.Drawing.Color.Black
+        Me.opt_reservasfac.Location = New System.Drawing.Point(11, 82)
+        Me.opt_reservasfac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.opt_reservasfac.Name = "opt_reservasfac"
+        Me.opt_reservasfac.Size = New System.Drawing.Size(308, 24)
+        Me.opt_reservasfac.TabIndex = 2
+        Me.opt_reservasfac.Text = "Consolidar Reservas por Facturas"
+        Me.opt_reservasfac.UseVisualStyleBackColor = True
         '
         'opt_reservasxid
         '
         Me.opt_reservasxid.AutoSize = True
         Me.opt_reservasxid.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.opt_reservasxid.ForeColor = System.Drawing.Color.Black
-        Me.opt_reservasxid.Location = New System.Drawing.Point(8, 41)
+        Me.opt_reservasxid.Location = New System.Drawing.Point(11, 50)
+        Me.opt_reservasxid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.opt_reservasxid.Name = "opt_reservasxid"
-        Me.opt_reservasxid.Size = New System.Drawing.Size(212, 20)
+        Me.opt_reservasxid.Size = New System.Drawing.Size(254, 24)
         Me.opt_reservasxid.TabIndex = 1
         Me.opt_reservasxid.Text = "Consolidar Reservas por ID"
         Me.opt_reservasxid.UseVisualStyleBackColor = True
@@ -151,9 +174,10 @@ Partial Class rpt_consolidar
         Me.optReservas.Checked = True
         Me.optReservas.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optReservas.ForeColor = System.Drawing.Color.Black
-        Me.optReservas.Location = New System.Drawing.Point(8, 18)
+        Me.optReservas.Location = New System.Drawing.Point(11, 22)
+        Me.optReservas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.optReservas.Name = "optReservas"
-        Me.optReservas.Size = New System.Drawing.Size(247, 20)
+        Me.optReservas.Size = New System.Drawing.Size(296, 24)
         Me.optReservas.TabIndex = 0
         Me.optReservas.TabStop = True
         Me.optReservas.Text = "Consolidar Reservas por Unidad"
@@ -164,10 +188,11 @@ Partial Class rpt_consolidar
         Me.cmdCerrar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdCerrar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.cmdCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCerrar.Location = New System.Drawing.Point(223, 279)
+        Me.cmdCerrar.Location = New System.Drawing.Point(297, 343)
+        Me.cmdCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdCerrar.Name = "cmdCerrar"
         Me.cmdCerrar.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(5)
-        Me.cmdCerrar.Size = New System.Drawing.Size(100, 36)
+        Me.cmdCerrar.Size = New System.Drawing.Size(133, 44)
         Me.cmdCerrar.TabIndex = 180
         Me.cmdCerrar.Text = "Cerrar"
         '
@@ -176,10 +201,11 @@ Partial Class rpt_consolidar
         Me.cmdImprimir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.cmdImprimir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.cmdImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdImprimir.Location = New System.Drawing.Point(96, 279)
+        Me.cmdImprimir.Location = New System.Drawing.Point(128, 343)
+        Me.cmdImprimir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdImprimir.Name = "cmdImprimir"
         Me.cmdImprimir.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(5)
-        Me.cmdImprimir.Size = New System.Drawing.Size(101, 36)
+        Me.cmdImprimir.Size = New System.Drawing.Size(135, 44)
         Me.cmdImprimir.TabIndex = 179
         Me.cmdImprimir.Text = "Imprimir"
         '
@@ -191,9 +217,11 @@ Partial Class rpt_consolidar
         Me.GroupBox5.Controls.Add(Me.LabelX2)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.GroupBox5.Location = New System.Drawing.Point(33, 12)
+        Me.GroupBox5.Location = New System.Drawing.Point(44, 15)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(369, 51)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Size = New System.Drawing.Size(492, 63)
         Me.GroupBox5.TabIndex = 128
         Me.GroupBox5.TabStop = False
         '
@@ -209,8 +237,9 @@ Partial Class rpt_consolidar
         Me.dtiHasta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dtiHasta.IsInputReadOnly = True
         Me.dtiHasta.IsPopupCalendarOpen = False
-        Me.dtiHasta.Location = New System.Drawing.Point(231, 19)
-        Me.dtiHasta.MaxDate = New Date(2020, 12, 31, 0, 0, 0, 0)
+        Me.dtiHasta.Location = New System.Drawing.Point(308, 23)
+        Me.dtiHasta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtiHasta.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         '
         '
         '
@@ -243,7 +272,7 @@ Partial Class rpt_consolidar
         Me.dtiHasta.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.dtiHasta.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
         Me.dtiHasta.Name = "dtiHasta"
-        Me.dtiHasta.Size = New System.Drawing.Size(100, 20)
+        Me.dtiHasta.Size = New System.Drawing.Size(133, 23)
         Me.dtiHasta.TabIndex = 120
         '
         'dtiDesde
@@ -258,8 +287,9 @@ Partial Class rpt_consolidar
         Me.dtiDesde.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dtiDesde.IsInputReadOnly = True
         Me.dtiDesde.IsPopupCalendarOpen = False
-        Me.dtiDesde.Location = New System.Drawing.Point(76, 19)
-        Me.dtiDesde.MaxDate = New Date(2020, 12, 31, 0, 0, 0, 0)
+        Me.dtiDesde.Location = New System.Drawing.Point(101, 23)
+        Me.dtiDesde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtiDesde.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         '
         '
         '
@@ -292,7 +322,7 @@ Partial Class rpt_consolidar
         Me.dtiDesde.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.dtiDesde.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
         Me.dtiDesde.Name = "dtiDesde"
-        Me.dtiDesde.Size = New System.Drawing.Size(100, 20)
+        Me.dtiDesde.Size = New System.Drawing.Size(133, 23)
         Me.dtiDesde.TabIndex = 119
         '
         'LabelX1
@@ -304,9 +334,10 @@ Partial Class rpt_consolidar
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX1.ForeColor = System.Drawing.Color.Black
-        Me.LabelX1.Location = New System.Drawing.Point(36, 21)
+        Me.LabelX1.Location = New System.Drawing.Point(48, 26)
+        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(34, 15)
+        Me.LabelX1.Size = New System.Drawing.Size(41, 18)
         Me.LabelX1.TabIndex = 115
         Me.LabelX1.Text = "desde"
         Me.LabelX1.TextAlignment = System.Drawing.StringAlignment.Center
@@ -321,9 +352,10 @@ Partial Class rpt_consolidar
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.Black
-        Me.LabelX2.Location = New System.Drawing.Point(191, 21)
+        Me.LabelX2.Location = New System.Drawing.Point(255, 26)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(31, 15)
+        Me.LabelX2.Size = New System.Drawing.Size(38, 18)
         Me.LabelX2.TabIndex = 117
         Me.LabelX2.Text = "hasta"
         Me.LabelX2.TextAlignment = System.Drawing.StringAlignment.Center
@@ -332,28 +364,17 @@ Partial Class rpt_consolidar
         'ChkCliente
         '
         Me.ChkCliente.AutoSize = True
-        Me.ChkCliente.Location = New System.Drawing.Point(105, 185)
+        Me.ChkCliente.Location = New System.Drawing.Point(140, 228)
+        Me.ChkCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ChkCliente.Name = "ChkCliente"
-        Me.ChkCliente.Size = New System.Drawing.Size(15, 14)
+        Me.ChkCliente.Size = New System.Drawing.Size(18, 17)
         Me.ChkCliente.TabIndex = 1054
         Me.ChkCliente.UseVisualStyleBackColor = True
         '
-        'opt_reservasfac
-        '
-        Me.opt_reservasfac.AutoSize = True
-        Me.opt_reservasfac.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.opt_reservasfac.ForeColor = System.Drawing.Color.Black
-        Me.opt_reservasfac.Location = New System.Drawing.Point(8, 67)
-        Me.opt_reservasfac.Name = "opt_reservasfac"
-        Me.opt_reservasfac.Size = New System.Drawing.Size(257, 20)
-        Me.opt_reservasfac.TabIndex = 2
-        Me.opt_reservasfac.Text = "Consolidar Reservas por Facturas"
-        Me.opt_reservasfac.UseVisualStyleBackColor = True
-        '
         'rpt_consolidar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(419, 345)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.ClientSize = New System.Drawing.Size(559, 425)
         Me.Controls.Add(Me.ChkCliente)
         Me.Controls.Add(Me.ChkContacto)
         Me.Controls.Add(Me.cboUnidad)
@@ -368,6 +389,7 @@ Partial Class rpt_consolidar
         Me.Controls.Add(Me.GroupBox5)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "rpt_consolidar"
         Me.Text = "Consolidacion Reservas"
         Me.GroupBox2.ResumeLayout(False)

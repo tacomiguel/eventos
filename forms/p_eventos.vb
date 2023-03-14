@@ -269,7 +269,7 @@ Public Class p_eventos
         Dim datiptabla As New MySqlDataAdapter
         'cadena = "Select cod_tabla,dsc_tabla from tipo_tabla where activo and tip_tabla='2'"
         cadena = "Select CONCAT('*',cod_tabla) cod_tabla,dsc_tabla from tipo_tabla where activo and tip_tabla='2' " _
-                & " union  select cod_sgrupo,nom_sgrupo from subgrupo where esEvento order by 2"
+                & " union  select cod_sgrupo,nom_sgrupo from subgrupo where esVenta order by 2"
         Dim comTiptabla As New MySqlCommand(cadena, dbConex)
         datiptabla.SelectCommand = comTiptabla
         datiptabla.Fill(dstiptabla, "tiptabla")
@@ -565,9 +565,9 @@ Public Class p_eventos
             Else
 
                 cadena = " Select cod_art As cod_recurso,nom_art As dsc_recurso,t.b_ancho,t.b_alto,0 as num_aux1,g.cod_grupo As cod_aux1," & txtnro_adultos.Text & " as cant,a.pre_venta,g.nom_grupo As dsc_grupo " _
-                     & " From articulo a inner Join subgrupo t on a.cod_sgrupo=t.cod_sgrupo " _
-                     & " left join grupo g on g.cod_grupo=t.cod_grupo " _
-                     & "  Where a.activo And (t.esEvento) And a.cod_sgrupo = '" & cod_tabla & "' order by 2"
+                     & " From articulo a inner Join subgrupo t on a.cod_grupov=t.cod_sgrupo " _
+                     & " left join grupo g on g.cod_grupo=t.cod_grupo  inner join almacen al on a.cod_alma=al.cod_alma" _
+                     & " where  a.activo And (t.esVenta) and al.esEvento  And a.cod_grupov = '" & cod_tabla & "' order by 2"
 
             End If
             mostrararticulos(cadena)
@@ -1001,8 +1001,9 @@ Public Class p_eventos
 
             cadena = " Select cod_art As cod_recurso,nom_art As dsc_recurso,t.b_ancho,t.b_alto,0 as num_aux1,g.cod_grupo As cod_aux1," & txtnro_adultos.Text & " as cant ,a.pre_venta,g.nom_grupo As dsc_grupo " _
                      & " From articulo a inner Join subgrupo t on a.cod_sgrupo=t.cod_sgrupo " _
-                     & " left Join grupo g on g.cod_grupo=t.cod_grupo " _
-                     & "  Where a.activo And (t.esEvento) and nom_art like '%" & cbotip_tabla.Text & "%' order by 2"
+                     & " left Join grupo g on g.cod_grupo=t.cod_grupo inner join almacen al on a.cod_alma=al.cod_alma " _
+                     & "  Where a.activo And (t.esEvento) and al.esEvento and nom_art like '%" & cbotip_tabla.Text & "%' order by 2"
+
         ElseIf TabPack.IsSelected Then
             cadena = " Select cod_art As cod_recurso,nom_art As dsc_recurso,t.b_ancho,t.b_alto,1 as num_aux1,0 as pre_venta," _
                   & txtnro_adultos.Text & " as cant ,'" & cod_grp & "' as cod_aux1, '" & nom_grp & "' as dsc_grupo" _

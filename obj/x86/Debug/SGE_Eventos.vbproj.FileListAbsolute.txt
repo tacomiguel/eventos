@@ -162,14 +162,7 @@ C:\Desktop\mtaco\Desarrollo\SGE_Eventos\obj\x86\Debug\Qsalon.exe.licenses
 C:\Desktop\mtaco\Desarrollo\SGE_Eventos\obj\x86\Debug\Qsalon.exe
 C:\Desktop\mtaco\Desarrollo\SGE_Eventos\obj\x86\Debug\Qsalon.xml
 C:\Desktop\mtaco\Desarrollo\SGE_Eventos\obj\x86\Debug\Qsalon.pdb
-D:\MTACO\desarrollo\eventos\bin\Debug\Qsalon.exe.config
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.vbproj.ResolveComReference.cache
-D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qsalon.exe
-D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qsalon.xml
-D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qsalon.pdb
-D:\MTACO\desarrollo\eventos\bin\Debug\Qsalon.exe
-D:\MTACO\desarrollo\eventos\bin\Debug\Qsalon.pdb
-D:\MTACO\desarrollo\eventos\bin\Debug\Qsalon.xml
 D:\MTACO\desarrollo\eventos\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\MTACO\desarrollo\eventos\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\MTACO\desarrollo\eventos\bin\Debug\CrystalDecisions.Shared.dll
@@ -198,7 +191,6 @@ D:\MTACO\desarrollo\eventos\bin\Debug\stdole.dll
 D:\MTACO\desarrollo\eventos\bin\Debug\ShockwaveFlashObjects.dll
 D:\MTACO\desarrollo\eventos\bin\Debug\DevComponents.DotNetBar.Schedule.xml
 D:\MTACO\desarrollo\eventos\bin\Debug\DevComponents.DotNetBar2.xml
-D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.vbprojResolveAssemblyReference.cache
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.base.resources
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.baseReporte.resources
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.c_eventos.resources
@@ -215,4 +207,12 @@ D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.rpt_consolidar.resources
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.rpt_reservas.resources
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.Resources.resources
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.vbproj.GenerateResource.Cache
-D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qsalon.exe.licenses
+D:\MTACO\desarrollo\eventos\bin\Debug\Qeventos.exe.config
+D:\MTACO\desarrollo\eventos\bin\Debug\Qeventos.exe
+D:\MTACO\desarrollo\eventos\bin\Debug\Qeventos.pdb
+D:\MTACO\desarrollo\eventos\bin\Debug\Qeventos.xml
+D:\MTACO\desarrollo\eventos\bin\Debug\MySql.Data.dll
+D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.exe.licenses
+D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.exe
+D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.xml
+D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.pdb

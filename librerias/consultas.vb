@@ -225,7 +225,7 @@ Module consultas
              & " left join tipo_recurso r3 on r.cod_vend=r3.c_aux" _
              & " left join tipo_recurso r5 on r.cod_estado=r5.cod_recurso" _
              & " left join tipo_recurso r4 on rd.cod_recurso=r4.cod_recurso" _
-             & " left join tipo_tabla t on r4.cod_tabla=t.cod_tabla" _
+             & " inner join tipo_tabla t on r4.cod_tabla=t.cod_tabla" _
              & " left join cliente c on r.cod_cliente=c.cod_clie" _
              & " left join cliente_contacto cc on r.cod_contacto=cc.cod_contacto" _
              & " left join cliente_sucursal cs on r.cod_sucursal=cs.cod_sucursal" _
