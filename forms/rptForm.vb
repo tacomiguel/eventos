@@ -1354,11 +1354,17 @@ Public Class rptForm
         Dim pdv0, pdv As New ParameterDiscreteValue
         Dim pfs As New ParameterFields
 
+        pf0.Name = "ruta"
+        pdv0.Value = pruta
+        pf0.CurrentValues.Add(pdv0)
+
         pf.Name = "titulo"
         pdv.Value = titulo
         pf.CurrentValues.Add(pdv)
 
+        pfs.Add(pf0)
         pfs.Add(pf)
+
         rpt.SetDataSource(ds)
         crv.ParameterFieldInfo = pfs
         crv.ReportSource = rpt
@@ -1387,30 +1393,23 @@ Public Class rptForm
 
     Public Sub cargarOrdenTrabajo(ByVal ds As DataSet, ByVal titulo As String)
         Dim rpt As New rpt_ordendetrabajo
-        'Dim nomreporte As String = pruta + "\reportes\rptOrdenTrabajo.rpt"
-        'Dim pf0, pf As New ParameterField
-        'Dim pdv0, pdv As New ParameterDiscreteValue
-        'Dim pfs As New ParameterFields
-        'pf0.Name = "ruta"
-        'pdv0.Value = pruta
-        'pf0.CurrentValues.Add(pdv0)
-        'pf.Name = "titulo"
-        'pdv.Value = titulo
-        'pf.CurrentValues.Add(pdv)
-        'pfs.Add(pf0)
-        'pfs.Add(pf)
-        'rpt.SetDataSource(ds)
-        'crv.ParameterFieldInfo = pfs
+
+        Dim pf0, pf As New ParameterField
+        Dim pdv0, pdv As New ParameterDiscreteValue
+        Dim pfs As New ParameterFields
+        pf0.Name = "ruta"
+        pdv0.Value = pruta
+        pf0.CurrentValues.Add(pdv0)
+
+        pf.Name = "titulo"
+        pdv.Value = titulo
+        pf.CurrentValues.Add(pdv)
+
+        pfs.Add(pf0)
+        pfs.Add(pf)
         rpt.SetDataSource(ds)
+        crv.ParameterFieldInfo = pfs
         crv.ReportSource = rpt
-        'crv.RefreshReport()
-
-        'Dim mirpt As New ReportDocument
-        '    mirpt.Load(nomreporte)
-        '    mirpt.SetDataSource(ds)
-        '    mirpt.PrintToPrinter(1, True, 1, 1)
-        'End If
-
 
 
 

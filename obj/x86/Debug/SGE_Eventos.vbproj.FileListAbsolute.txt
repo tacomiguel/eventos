@@ -216,3 +216,4 @@ D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.exe.licenses
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.exe
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.xml
 D:\MTACO\desarrollo\eventos\obj\x86\Debug\Qeventos.pdb
+D:\MTACO\desarrollo\eventos\obj\x86\Debug\SGE_Eventos.vbprojResolveAssemblyReference.cache

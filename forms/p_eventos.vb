@@ -1043,69 +1043,69 @@ Public Class p_eventos
     End Sub
 
     Private Sub enviaCorreu()
-        Dim m_OutLook As Outlook.Application
-        Try
+        'Dim m_OutLook As Outlook.Application
+        'Try
 
-            '* Creamos un Objeto tipo Mail  
+        '    '* Creamos un Objeto tipo Mail  
 
-            Dim objMail As Outlook.MailItem
+        '    Dim objMail As Outlook.MailItem
 
-            '* Inicializamos nuestra apliación OutLook  
+        '    '* Inicializamos nuestra apliación OutLook  
 
-            m_OutLook = New Outlook.Application
-
-
-
-            '* Creamos una instancia de un objeto tipo MailItem 
-
-            objMail = m_OutLook.CreateItem(Outlook.OlItemType.olMailItem)
+        '    m_OutLook = New Outlook.Application
 
 
 
-            '* Asignamos las propiedades a nuestra Instancial del objeto 
+        '    '* Creamos una instancia de un objeto tipo MailItem 
 
-            '* MailItem 
-
-            objMail.To = txtEmail.Text
-
-            objMail.Subject = txtnom_evento.Text
-
-            objMail.Body = txtObservacion.Text
-
-            'Si queremos enviar un archivo adjunto usamos este codigo… 
-            'Dim sSource As String = "d:\ejemplo.txt"
-            'Dim sDisplayName As String = "ejemplo.txt"
-            'Dim sBodyLen As String = objMail.Body.Length
-            'Dim oAttachs As Outlook.Attachments = objMail.Attachments
-            'Dim oAttach As Outlook.Attachment
-            'oAttach = oAttachs.Add(sSource, , sBodyLen + 1, sDisplayName)
-
-
-            objMail.Display()
-
-            'objMail.Send()
+        '    objMail = m_OutLook.CreateItem(Outlook.OlItemType.olMailItem)
 
 
 
-            '* Desplegamos un mensaje indicando que todo fue exitoso  
+        '    '* Asignamos las propiedades a nuestra Instancial del objeto 
 
-            'MessageBox.Show("Mail Enviado", "Integración con OutLook", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        '    '* MailItem 
 
-        Catch ex As Exception
+        '    objMail.To = txtEmail.Text
 
-            '* Si se produce algun Error Notificar al usuario  
+        '    objMail.Subject = txtnom_evento.Text
 
-            MessageBox.Show("Error enviando mail")
+        '    objMail.Body = txtObservacion.Text
+
+        '    'Si queremos enviar un archivo adjunto usamos este codigo… 
+        '    'Dim sSource As String = "d:\ejemplo.txt"
+        '    'Dim sDisplayName As String = "ejemplo.txt"
+        '    'Dim sBodyLen As String = objMail.Body.Length
+        '    'Dim oAttachs As Outlook.Attachments = objMail.Attachments
+        '    'Dim oAttach As Outlook.Attachment
+        '    'oAttach = oAttachs.Add(sSource, , sBodyLen + 1, sDisplayName)
+
+
+        '    objMail.Display()
+
+        '    'objMail.Send()
 
 
 
-        Finally
+        '    '* Desplegamos un mensaje indicando que todo fue exitoso  
 
-            m_OutLook = Nothing
+        '    'MessageBox.Show("Mail Enviado", "Integración con OutLook", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+        'Catch ex As Exception
+
+        '    '* Si se produce algun Error Notificar al usuario  
+
+        '    MessageBox.Show("Error enviando mail")
 
 
 
-        End Try
+        'Finally
+
+        '    m_OutLook = Nothing
+
+
+
+        'End Try
     End Sub
 
 
