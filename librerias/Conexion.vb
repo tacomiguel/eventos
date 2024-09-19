@@ -10,7 +10,7 @@ Public Class Conexion
             Dim basedatos As String = ConfigurationManager.AppSettings("BaseDatos").ToString
             ' Dim licencia As String = ConfigurationManager.AppSettings("licencia").ToString
 
-            Dim conex As String = "User Id=custom;password=P4nt3r4--;server=" & servidor & ";database=" & basedatos &
+            Dim conex As String = "User Id=custom;password=;server=" & servidor & ";database=" & basedatos &
               ";Convert Zero Datetime=True;persist security info=True;use procedure bodies=False;Connection Timeout=300 ; pooling=true; Max Pool Size=300"
 
             ' Dim cifrado As String = seguridad.Cifrado(1, 4, licencia, "password12345678", "password12345678")
